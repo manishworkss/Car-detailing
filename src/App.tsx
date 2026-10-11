@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BrandPartners } from './components/BrandPartners';
+import { CarPOV3DExperience } from './components/CarPOV3DExperience';
 import { Services } from './components/Services';
 import { PPFSection } from './components/PPFSection';
 import { CeramicSection } from './components/CeramicSection';
@@ -11,7 +12,7 @@ import { GoogleReviews } from './components/GoogleReviews';
 import { StudioLocator } from './components/StudioLocator';
 import { BookingContact } from './components/BookingContact';
 import { Footer } from './components/Footer';
-import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { TermsConditionsModal } from './components/TermsConditionsModal';
 
@@ -37,6 +38,9 @@ export function App() {
       <main className="flex-1">
         <Hero onOpenBooking={() => scrollToBooking()} />
         <BrandPartners />
+        <div id="car-pov">
+          <CarPOV3DExperience />
+        </div>
         <Services onSelectService={(service) => scrollToBooking(service)} />
         <PPFSection onOpenBooking={() => scrollToBooking('Paint Protection Film (PPF)')} />
         <CeramicSection onOpenBooking={() => scrollToBooking('9H Ceramic Coating')} />
@@ -52,7 +56,7 @@ export function App() {
         onOpenTerms={() => setIsTermsOpen(true)}
       />
 
-      <WhatsAppFloatingButton />
+      <ChatbotWidget onOpenBooking={() => scrollToBooking()} />
 
       {/* Legal Modals */}
       <PrivacyPolicyModal

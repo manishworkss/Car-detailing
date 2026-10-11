@@ -19,6 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   }, []);
 
   const navLinks = [
+    { label: '3D Bay POV', href: '#car-pov' },
     { label: 'Services', href: '#services' },
     { label: 'PPF Armor', href: '#ppf' },
     { label: 'Ceramic 9H', href: '#ceramic' },

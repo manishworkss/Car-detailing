@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F5F5F7] leading-[1.15]"
+              className="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F5F5F7] leading-[1.2] sm:leading-[1.15]"
             >
               Certified Paint Protection Film & Multi-Layer Ceramic Coatings
             </motion.h1>
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-6 text-base sm:text-lg text-[#B5B5BE] font-normal leading-relaxed max-w-2xl"
+              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-[#B5B5BE] font-normal leading-relaxed max-w-2xl"
             >
               Engineered paint restoration, self-healing optical TPU film, and 9H nanocoatings for sports, luxury, and exotic automobiles. Applied inside a dust-free, climate-controlled detailing bay.
             </motion.p>
@@ -68,13 +68,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4"
+              className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
               <motion.button
                 whileHover={{ y: -2, boxShadow: '0 8px 24px rgba(197, 160, 89, 0.3)' }}
                 whileTap={{ y: 0 }}
                 onClick={onOpenBooking}
-                className="btn-luxury-primary cursor-pointer text-center"
+                className="btn-luxury-primary cursor-pointer text-center w-full sm:w-auto"
               >
                 Request Vehicle Estimate
                 <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -85,40 +85,51 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 href="https://wa.me/917435010050?text=Hello%20Exotic%20Car%20Detailing%20Studio%2C%20I%20would%20like%20a%20quote%20for%20my%20vehicle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-luxury-secondary text-center"
+                className="btn-luxury-secondary text-center w-full sm:w-auto"
               >
                 <MessageSquare className="w-4 h-4 text-[#25D366]" />
                 WhatsApp Quick Quote
               </motion.a>
             </motion.div>
 
+            {/* Interactive 3D POV Jump Pill */}
+            <div className="mt-4">
+              <a
+                href="#car-pov"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#12141A]/90 border border-[#C5A059]/30 text-[11px] font-semibold text-[#DEC07E] hover:border-[#C5A059] transition-all"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                <span>Explore 3D Cockpit POV & Beading Simulator ↓</span>
+              </a>
+            </div>
+
             {/* Technical Verification Chips */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-6"
+              className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6"
             >
-              <div>
-                <div className="flex items-center gap-1.5 text-[#C5A059] mb-1">
-                  <Shield className="w-4 h-4" />
-                  <span className="text-xs uppercase tracking-wider font-semibold">10-Year</span>
+              <div className="p-2.5 sm:p-3 bg-[#101217]/80 border border-white/5 rounded">
+                <div className="flex items-center gap-1 sm:gap-1.5 text-[#C5A059] mb-1">
+                  <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold truncate">10-Year</span>
                 </div>
-                <p className="text-xs text-[#9E9EA7]">Official Film Warranty</p>
+                <p className="text-[10px] sm:text-xs text-[#9E9EA7] leading-tight">Film Warranty</p>
               </div>
-              <div>
-                <div className="flex items-center gap-1.5 text-[#C5A059] mb-1">
-                  <Award className="w-4 h-4" />
-                  <span className="text-xs uppercase tracking-wider font-semibold">9H Hardness</span>
+              <div className="p-2.5 sm:p-3 bg-[#101217]/80 border border-white/5 rounded">
+                <div className="flex items-center gap-1 sm:gap-1.5 text-[#C5A059] mb-1">
+                  <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold truncate">9H Hardness</span>
                 </div>
-                <p className="text-xs text-[#9E9EA7]">Lab Tested Bond</p>
+                <p className="text-[10px] sm:text-xs text-[#9E9EA7] leading-tight">Lab Tested</p>
               </div>
-              <div>
-                <div className="flex items-center gap-1.5 text-[#C5A059] mb-1">
-                  <Sparkles className="w-4 h-4" />
-                  <span className="text-xs uppercase tracking-wider font-semibold">ISO Grade</span>
+              <div className="p-2.5 sm:p-3 bg-[#101217]/80 border border-white/5 rounded">
+                <div className="flex items-center gap-1 sm:gap-1.5 text-[#C5A059] mb-1">
+                  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold truncate">ISO Grade</span>
                 </div>
-                <p className="text-xs text-[#9E9EA7]">Cleanroom Application</p>
+                <p className="text-[10px] sm:text-xs text-[#9E9EA7] leading-tight">Cleanroom</p>
               </div>
             </motion.div>
           </div>
